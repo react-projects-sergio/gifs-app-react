@@ -50,3 +50,10 @@ export const mockGifs: Gif[] = [
     height: 280,
   },
 ];
+
+export const mockSearches: string[] = [
+  "Star Wars",
+  "Cyberpunk",
+  "Batman",
+  "Demon Slayer",
+];

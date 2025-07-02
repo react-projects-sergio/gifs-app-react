@@ -1,6 +1,6 @@
 import { GifList } from "./gifs/components/GifList";
 import { PreviousSearches } from "./gifs/components/PreviousSearches";
-import { mockGifs } from "./mock-data/gifs.mock";
+import { mockGifs, mockSearches } from "./mock-data/gifs.mock";
 import { CustomHeader } from "./shared/components/CustomHeader";
 import { SearchBar } from "./shared/components/SearchBar";
 
@@ -14,7 +14,7 @@ export const GifsApp = () => {
 
       <SearchBar placeholder="Buscar gifs" />
 
-      <PreviousSearches />
+      <PreviousSearches searches={mockSearches} />
 
       <GifList gifs={mockGifs} />
     </>
