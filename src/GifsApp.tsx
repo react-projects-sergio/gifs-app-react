@@ -6,10 +6,14 @@ import { CustomHeader } from "./shared/components/CustomHeader";
 import { SearchBar } from "./shared/components/SearchBar";
 
 export const GifsApp = () => {
-  const [previousTermers, setPreviousTermers] = useState(["dragon ball z"]);
+  const [previousTerms, setPreviousTerms] = useState(["dragon ball z"]);
 
   const handleTermClick = (term: string) => {
     console.log({ term });
+  };
+
+  const handleSearch = (query: string) => {
+    console.log({ query });
   };
 
   return (
@@ -19,10 +23,10 @@ export const GifsApp = () => {
         description="Descubre y comparte el Gif perfecto"
       />
 
-      <SearchBar placeholder="Buscar gifs" />
+      <SearchBar placeholder="Buscar gifs" onQuery={handleSearch} />
 
       <PreviousSearches
-        searches={previousTermers}
+        searches={previousTerms}
         onLabelClick={handleTermClick}
       />
 
